@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const Wrapper = styled('div')({
+const Wrapper = styled('div')(({ background }) => ({
     borderRadius: 10,
-    background: '#afffff',
+    background,
+    color: '#ffffff',
     gridArea: 'footer',
     padding: 5,
     textAlign: 'center'
-});
+}));
 
-const Footer = () => {
+const Footer = ({ bgColor }) => {
     return (
-        <Wrapper>Footer</Wrapper>
+        <Wrapper background={bgColor}>Footer</Wrapper>
     );
 }
 

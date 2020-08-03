@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const Wrapper = styled('div')({
+const Wrapper = styled('div')(({ background }) => ({
     borderRadius: 10,
-    background: '#6de8ff',
+    background,
+    color: '#ffffff',
     gridArea: 'sidebar',
     padding: 5,
     textAlign: 'center'
-});
+}));
 
-const Sidebar = () => {
+const Sidebar = ({ bgColor }) => {
     return (
-        <Wrapper>Sidebar</Wrapper>
+        <Wrapper background={bgColor}>Sidebar</Wrapper>
     );
 }
 

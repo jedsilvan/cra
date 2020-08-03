@@ -1,9 +1,12 @@
 import React from 'react';
+import Provider from './context/Provider';
 import Root from './layout';
 
 function App() {
   return (
-    <Root />
+    <Provider>
+        <Root />
+    </Provider>
   );
 }
 
